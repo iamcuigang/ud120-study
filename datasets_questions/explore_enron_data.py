@@ -118,3 +118,14 @@ HowManyPOIPaymentsNan()
 
 # prPerson('LAY KENNETH L')
 # print featureFormat(enron_data, ['total_payments'])
+
+def prFeature(feature):
+	feature_list = []
+	for ps in enron_data:
+		if enron_data[ps][feature] != 'NaN':
+			feature_list.append([ps, enron_data[ps][feature]])
+	feature_list.sort(lambda x,y: cmp(x[1], y[1]))
+	print feature_list
+
+# prFeature('exercised_stock_options')
+# prFeature('salary')
