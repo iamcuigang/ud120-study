@@ -32,7 +32,8 @@ target, features = targetFeatureSplit( data )
 
 ### training-testing split needed in regression, just like classification
 from sklearn.cross_validation import train_test_split
-feature_train, feature_test, target_train, target_test = train_test_split(features, target, test_size=0.5, random_state=42)
+feature_train, feature_test, target_train, target_test =\
+    train_test_split(features, target, test_size=0.5, random_state=42)
 train_color = "b"
 test_color = "r"
 
@@ -51,7 +52,6 @@ print 'Score of test data:',
 print reg.score(feature_test, target_test)
 print 'Score of train data:',
 print reg.score(feature_train, target_train)
-
 
 ### draw the scatterplot, with color-coded training and testing points
 import matplotlib.pyplot as plt
