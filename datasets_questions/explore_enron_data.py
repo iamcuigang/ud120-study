@@ -116,4 +116,5 @@ ValidSalaryOrEmail()
 HowManyPersonPaymentsNan()
 HowManyPOIPaymentsNan()
 
+# prPerson('LAY KENNETH L')
 # print featureFormat(enron_data, ['total_payments'])
