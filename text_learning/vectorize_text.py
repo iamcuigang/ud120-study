@@ -43,7 +43,8 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
         ### only look at first 200 emails when developing
         ### once everything is working, remove this line to run over full dataset
         temp_counter += 1
-        if temp_counter < 3:
+        # if temp_counter < 2:
+        if True:
             path = os.path.join('..', path[:-1])
             print path
             email = open(path, "r")
@@ -73,7 +74,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
             email.close()
 
 print "emails processed"
-print word_data[:2]
+# print word_data[:2]
 from_sara.close()
 from_chris.close()
 
@@ -84,5 +85,8 @@ pickle.dump( from_data, open("your_email_authors.pkl", "w") )
 from sklearn.feature_extraction.text import TfidfVectorizer
 transform = TfidfVectorizer(stop_words='english')
 tfidf = transform.fit_transform(word_data)
-print tfidf.shape
+feature_names = transform.get_feature_names()
+print 'There are ? words in:',
+print len(feature_names)
+print 'words[34597] is:', feature_names[34597]
 
