@@ -48,6 +48,20 @@ clf = tree.DecisionTreeClassifier()#min_samples_split=40)
 clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
 acc = accuracy_score(pred, labels_test)
-print acc
+print 'Decision-Tree Classifier accuracy score is:', acc
+# idx = argmax(clf.feature_importances_)
+print 'The importance feature is:', 
+# print clf.feature_importances_[idx], ',', idx
+idx = 0
+for i in range(len(clf.feature_importances_)):
+    importance = clf.feature_importances_[i]
+    if importance >=0.2:
+        print '(', i,':', importance, ')'
+        idx = i
+        # break
+print 'The importance word is:',
+print vectorizer.get_feature_names()[idx]
+
+print 'All Done'
 
 

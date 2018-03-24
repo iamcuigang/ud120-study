@@ -55,13 +55,10 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
             text = parseOutText(email)
             ### use str.replace() to remove any instances of the words
             ### ["sara", "shackleton", "chris", "germani"]
-            remove_list = ["sara", "shackleton", "chris", "germani"]
+            remove_list = ["sara", "shackleton", "chris", "germani", 'sshacklensf', 'cgermannsf']
+            # remove_list = ["sara", "shackleton", "chris", "germani"] # before lesson 12
             for to_remove in remove_list:
                 text = text.replace(to_remove, '')
-            
-            # stw = stopwords.words('english')
-            # for to_remove in stw:
-            #     text = text.replace(to_remove, '')
 
             ### append the text to word_data
             word_data.append(text)
@@ -89,4 +86,6 @@ feature_names = transform.get_feature_names()
 print 'There are ? words in:',
 print len(feature_names)
 print 'words[34597] is:', feature_names[34597]
+
+
 

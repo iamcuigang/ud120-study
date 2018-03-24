@@ -72,7 +72,7 @@ if by3_feature:
 else:
     for f1, f2 in finance_features:
         plt.scatter( f1, f2)        
-# plt.show()
+plt.show()
 
 ### cluster here; create predictions of the cluster labels
 ### for the data and store them to a list called pred
