@@ -46,7 +46,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
         # if temp_counter < 2:
         if True:
             path = os.path.join('..', path[:-1])
-            print path
+            # print path
             email = open(path, "r")
 
             ### use parseOutText to extract the text from the opened email

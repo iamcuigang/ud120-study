@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 
 """ 
     This is the code to accompany the Lesson 2 (SVM) mini-project.
@@ -32,8 +32,8 @@ clf = svm.SVC(kernel="rbf", C=10000.0)# more bigger more complex
 
 
 # cut data to small
-features_train = features_train[:len(features_train)/100] 
-labels_train = labels_train[:len(labels_train)/100] 
+# features_train = features_train[:len(features_train)/100] 
+# labels_train = labels_train[:len(labels_train)/100] 
 
 clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
