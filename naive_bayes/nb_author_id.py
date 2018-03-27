@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#/usr/local/bin/python
 
 """ 
     This is the code to accompany the Lesson 1 (Naive Bayes) mini-project. 
